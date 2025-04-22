@@ -1,0 +1,9 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Project specific
+node_modules/
+.sass-cache/
+*.css.map

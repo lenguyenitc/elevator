@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevator System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="building">
+        <div class="floors">
+            <!-- Floors 9 to 0 (Ground Floor) -->
+            <div class="floor">
+                <span class="floor-number">9th</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="9">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">8th</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="8">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">7th</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="7">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">6th</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="6">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">5th</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="5">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">4th</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="4">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">3rd</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="3">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">2nd</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="2">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">1st</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="1">Call</button>
+                </div>
+            </div>
+            <div class="floor">
+                <span class="floor-number">Ground floor</span>
+                <div class="floor-info">
+                    <div class="wait-time"></div>
+                    <button class="call-button" data-floor="0">Call</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="elevators">
+            <!-- 5 Elevators -->
+            <div class="elevator" data-elevator="1">
+                <img src="images/elevator.svg" class="elevator-svg" alt="Elevator 1">
+            </div>
+            <div class="elevator" data-elevator="2">
+                <img src="images/elevator.svg" class="elevator-svg" alt="Elevator 2">
+            </div>
+            <div class="elevator" data-elevator="3">
+                <img src="images/elevator.svg" class="elevator-svg" alt="Elevator 3">
+            </div>
+            <div class="elevator" data-elevator="4">
+                <img src="images/elevator.svg" class="elevator-svg" alt="Elevator 4">
+            </div>
+            <div class="elevator" data-elevator="5">
+                <img src="images/elevator.svg" class="elevator-svg" alt="Elevator 5">
+            </div>
+        </div>
+    </div>
+
+    <!-- Logs Section -->
+    <div class="logs">
+        <h3>System Logs</h3>
+        <div id="log-container"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

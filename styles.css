@@ -1,0 +1,172 @@
+html {
+  font-family: monospace;
+}
+html * {
+  box-sizing: border-box;
+}
+
+.building {
+  display: flex;
+  margin: 20px auto;
+  border: 1px solid #e0e0e0;
+  height: 600px;
+  max-width: 1000px;
+  background-color: #f5f5f5;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.floors {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.floor {
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: white;
+}
+.floor-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wait-time {
+  font-family: monospace;
+  font-size: 14px;
+  color: #666;
+  min-width: 80px;
+  text-align: right;
+}
+.wait-time:not(:empty) {
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+.wait-time:not(:empty):contains("Arriving") {
+  color: #2196F3;
+  font-weight: bold;
+}
+.wait-time:not(:empty):contains("Arrived") {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.floor-number {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 30px;
+  color: #666;
+}
+
+.call-button {
+  padding: 6px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  min-width: 80px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #4CAF50;
+  color: white;
+}
+.call-button.waiting {
+  background-color: #F44336;
+}
+.call-button.arrived {
+  background-color: #2196F3;
+  border-style: dashed;
+  font-weight: 500;
+}
+
+.elevators {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+  pointer-events: none;
+  bottom: 0;
+}
+
+.elevator {
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  transition: transform 0.5s ease;
+  transform-origin: bottom;
+}
+.elevator .elevator-svg {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.5s ease;
+  filter: brightness(0.9);
+  opacity: 0.9;
+}
+.elevator.moving .elevator-svg {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(7414%) hue-rotate(359deg) brightness(94%) contrast(117%);
+  opacity: 1;
+}
+.elevator.arrived .elevator-svg {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(128%);
+  opacity: 1;
+}
+.elevator[data-elevator="1"] {
+  left: 0;
+}
+.elevator[data-elevator="2"] {
+  left: 60px;
+}
+.elevator[data-elevator="3"] {
+  left: 120px;
+}
+.elevator[data-elevator="4"] {
+  left: 180px;
+}
+.elevator[data-elevator="5"] {
+  left: 240px;
+}
+
+.logs {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.logs h3 {
+  margin-top: 0;
+  color: #333;
+  font-weight: 500;
+}
+.logs #log-container {
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 13px;
+}
+.logs #log-container div {
+  margin: 4px 0;
+  padding: 4px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+}
+
+/*# sourceMappingURL=styles.css.map */
